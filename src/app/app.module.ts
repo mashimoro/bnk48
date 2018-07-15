@@ -22,7 +22,7 @@ const routers: Route[] = [
   { path: 'instagram/:instagramId', component: InstagramComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'editbnk/:name', component: EditbnkComponent }
+  { path: 'admin/editbnk/:id', component: EditbnkComponent }
 
 ];
 @NgModule({

@@ -1,3 +1,23 @@
-<p>
-  editbnk works!
-</p>
+ 
+      <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <form class="form" [formGroup]="bnkForm">
+                <div class="form-group">
+                  <label>name:</label>
+                  <input type="text" class="form-control" formControlName="name" />
+                </div>
+                <div class="form-group">
+                  <label>imgUrl:</label>
+                  <input type="text" class="form-control" formControlName="imgUrl" />
+                </div>
+                <div class="form-group">
+                    <label>instagramId:</label>
+                    <input type="text" class="form-control" formControlName="instagramId" />
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="submitForm()">Save</button>
+                <button type="button" class="btn btn-primary ml-1" (click)="reset()">Reset</button>
+              </form>
+            </div>
+          </div>
+        </div>
