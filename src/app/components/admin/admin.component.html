@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <!-- <th scope="col">imgUrl</th>
+      <th scope="col">instagramId</th> -->
+        <th scope="col">Name</th>
+        <th>แก้ไข</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mem of members; index as i;" [routerLink]="['/editbnk' , mem.name]">
+        <th scope="row">{{i+1}}</th>
+        <!-- <td>{{mem.imgUrl}}</td>
+      <td>{{mem.instagramId}}</td> -->
+        <td>{{mem.name}}</td>
+        <td>แก้ไข</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

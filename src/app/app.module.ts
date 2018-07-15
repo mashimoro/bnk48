@@ -13,12 +13,16 @@ import { InstagramListComponent } from './components/instagram-list/instagram-li
 import { InstagramMemberComponent } from './components/instagram-member/instagram-member.component';
 import { BnksuffixpipePipe } from './pipes/bnksuffixpipe.pipe';
 import { LoginComponent } from './components/login/login.component';
-import { ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './components/admin/admin.component';
+import { EditbnkComponent } from './components/editbnk/editbnk.component';
 const routers: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'instagram/:instagramId', component: InstagramComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'editbnk/:name', component: EditbnkComponent }
 
 ];
 @NgModule({
@@ -31,7 +35,9 @@ const routers: Route[] = [
     InstagramListComponent,
     InstagramMemberComponent,
     BnksuffixpipePipe,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    EditbnkComponent
   ],
   imports: [
     BrowserModule,
