@@ -12,10 +12,14 @@ import { InstagramComponent } from './components/instagram/instagram.component';
 import { InstagramListComponent } from './components/instagram-list/instagram-list.component';
 import { InstagramMemberComponent } from './components/instagram-member/instagram-member.component';
 import { BnksuffixpipePipe } from './pipes/bnksuffixpipe.pipe';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule} from '@angular/forms';
 const routers: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'instagram/:instagramId', component: InstagramComponent }
+  { path: 'instagram/:instagramId', component: InstagramComponent },
+  { path: 'login', component: LoginComponent }
+
 ];
 @NgModule({
   declarations: [
@@ -26,12 +30,14 @@ const routers: Route[] = [
     InstagramComponent,
     InstagramListComponent,
     InstagramMemberComponent,
-    BnksuffixpipePipe
+    BnksuffixpipePipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routers)
+    RouterModule.forRoot(routers),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
