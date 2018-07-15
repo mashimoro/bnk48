@@ -28,7 +28,10 @@ export class LoginComponent implements OnInit {
   login() {
     console.log('login ', this.loginForm.value);
     // this.http.post(`${environment.api_url}/auth/login`, this.loginForm.value).subscribe(data => console.log(data));
-   this.auth.authen(this.loginForm.value).subscribe(obj =>  console.log(obj ));
+    this.auth.authen(this.loginForm.value).subscribe(obj => console.log(obj),
+      error => {
+        console.log(error.message);
+      });
   }
 
 }
